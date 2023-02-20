@@ -1,13 +1,13 @@
 # CSS Guide Part 2
 
- Detailed guide about CSS (all basics for CSS) + templates.
+ detailed guide about CSS (all basics for CSS) + templates.
 
  The code examples in the guide can be found in the listed folders.
 
 -----------------------------------------------------------------------------------------
 
 ## Contents
-### CSS Guide Part 1 [CSS Guide Part 1]()
+### [CSS Guide Part 1]()
 1. Introduction to CSS
     - 1.1. History of CSS 
     - 1.2. Principle of CSS application
