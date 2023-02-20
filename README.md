@@ -1,6 +1,6 @@
 # CSS Guide Part 2
 
- detailed guide about CSS (all basics for CSS) + templates.
+ Detailed guide about CSS (all basics for CSS) + templates.
 
  The code examples in the guide can be found in the listed folders.
 
