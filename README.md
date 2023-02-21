@@ -185,7 +185,7 @@ The viewport plays an essential role in terms of querying media features on mobi
 
 In terms of desktop computers, the viewport is the inner area of the browser window without the borders. When the browser window is reduced or enlarged, the viewport is also reduced or enlarged. This visual viewport can be addressed with the media features `width` and `height`. On mobile devices like a smartphone, the screens are much smaller than on a desktop computer, but the viewport there is still often larger than on desktop screens. Without special adjustments to the viewport for mobile devices, therefore, the web page on these devices would often be called a layout viewport.
 
-The problem with mobile devices can be easily solved with the metatag `viewport` or CSS rule `@viewport`. 
+The problem with mobile devices can be easily solved with the meta-tag `viewport` or CSS rule `@viewport`. 
 
 - The metatag `viewport` is added in the `head` area of the HTML document
 
