@@ -69,8 +69,8 @@ Using the `link` element, CSS instructions are provided for the screen (`media="
  ![Preview](6_Responsive_Layouts/images/Preview_6_print.PNG)
 
 
-### The media queries for media properties
-- The media properties can be included and used in various ways. The use of such a media query in HTML can be noted as follows:
+### The media queries for media features
+- The media features can be included and used in various ways. The use of such a media query in HTML can be noted as follows:
 
    ```
     ...
@@ -111,22 +111,22 @@ mobile.css is used only if the maximum screen width of 480 pixels is not exceede
 
 If the maximum screen size of 480 pixels is not exceeded, the background is displayed in yellow.
 
-- Use media properties with the `@import` rule as follows:
+- Use media features with the `@import` rule as follows:
 
    ```
     @import url('styles/mobile_480.css') screen and (max-width: 480px);
    ```
 
-Thus, querying media properties can be used in HTML with the `link` element or in the `style` element and in CSS with the `@media` or `@import` rule.
+Thus, querying media features can be used in HTML with the `link` element or in the `style` element and in CSS with the `@media` or `@import` rule.
 
 
-### Basic structure of a media properties query
+### Basic structure of a media features query
 
  ![Preview](6_Responsive_Layouts/images/MediaQuery.png)
 
 
-#### Link the media properties
-The media property is linked with the keyword `and`. Several `and` characteristics can be linked and processed. The link can be made with or without a media type.
+#### Link the media features
+The media features is linked with the keyword `and`. Several `and` characteristics can be linked and processed. The link can be made with or without a media type.
 
 For example:
 
@@ -156,3 +156,27 @@ If only one media type is to be used, a specification can be made in front of th
    ```
 
 A media query can also be negated with `not`.
+
+
+### Which media features can be queried?
+The various output devices have many different features. The most common feature that is queried is the minimum and maximum width of the display area.
+
+
+| Media features | Meaning                                                          | Values |
+| -------------- | ---------------------------------------------------------------- | ------ |
+| `width`,`min-width`,`max-width` | Width of the display area (viewport) of the web browser. Possible values are positive length values e.g. `min-width: 480px`. | px, %, em |
+| `height`,`min-height`,`max-height` | Height of the display width of the web browser. Possible values are positive length values e.g. `max-height: 720px`. | px, %, em |
+| `orientation` | This sets the orientation of the device from. The orientation can be portrait or landscape e.g. `orientation: landscape`. | portrait, landscape |
+| `aspect-ration`, `min-aspect-ration`, `max-aspect-ration` | Specifies the aspect ratio of `width` and `height` to each other. A value of 1280 x 720 corresponds to an aspect ratio of 16:9. | width/height e.g. 16/9, 1280/720 |
+| `color`, `min-color/max-color` | Query the color depth of the device. For black and white devices the value for color is 0  | Integer value |
+| `color-index`, `min-color-index`, `max-color-index` | Checks the use of indexed colors of the output device | Integer value |
+| `monochrome`, `min-monochrome`, `max-monochrome` | Checks if the output device is monochrome. | Integer value |
+| `resolution`, `min-resolution`, `max-resolution` | Query the pixel density of the device, e.g. `resolution: 720dpi`. | dpi, dcm |
+| `pointer`, `any-pointer` | Tests if the output device provides a mouse as an input device. | none, coarse, fine |
+| `hover`, `any-hover` | Checks if the output device provides hover effects at the primary input device. | none, hover |
+
+
+An overview of all media features can be found at [WC3 - Media Queries](https://www.w3.org/TR/mediaqueries-4/).
+
+
+### The viewport for mobile devices
