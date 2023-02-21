@@ -33,6 +33,7 @@
 ### CSS Guide Part 2
 6. Responsive layouts with CSS
     - 6.1. Theoretical basic knowledge about responsive web design
+    - 6.2. Create a responsive layout
 
 
 --------------------------------------------------------------------------------------------
@@ -180,3 +181,96 @@ An overview of all media features can be found at [WC3 - Media Queries](https://
 
 
 ### The viewport for mobile devices
+The viewport plays an essential role in terms of querying media features on mobile devices. The viewport on desktop computers and the viewport on mobile devices often causes a bit of confusion. High-resolution displays make it even more complicated, as a pixel is suddenly no longer a pixel. A collection of the many different sizes of displays on different devices can be found at [Screensiz.es](http://screensiz.es/).
+
+In terms of desktop computers, the viewport is the inner area of the browser window without the borders. When the browser window is reduced or enlarged, the viewport is also reduced or enlarged. This visual viewport can be addressed with the media features `width` and `height`. On mobile devices like a smartphone, the screens are much smaller than on a desktop computer, but the viewport there is still often larger than on desktop screens. Without special adjustments to the viewport for mobile devices, therefore, the web page on these devices would often be called a layout viewport.
+
+The problem with mobile devices can be easily solved with the metatag `viewport` or CSS rule `@viewport`. 
+
+- The metatag `viewport` is added in the `head` area of the HTML document
+
+   ```
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+The `width=device-width` sets the width of the layout viewport to the width of the visual viewport. With this line all different layout viewports from different devices are normalized and adjusted to the current display size. Besides `width` there is the counterpart with `height=device-height` for the height, but this is rarely needed in practice.
+
+With `initial-scale=1.0` the initial zoom value is set to 100% or 1:1. In addition to `initial-scale` there are further viewport features with `minimum-scale` or `maximum-scale`, with which the minimum and maximum zoom level can be set. With `user-scaleable=no` zooming can be blocked completely.
+
+- The `@viewport` rule
+
+   ```
+    @viewport {
+        width: device-width;
+        zoom: 1;
+    }
+   ```
+
+In the future the CSS rule `@viewport` will probably replace the metatag. But not all browsers support this method yet. The advantage of the CSS rule is, that theoretically more is possible, because different media queries can be declared with different information.
+
+Once the viewport has been adjusted, the web page must also be optimized using media queries. The setting of the viewport alone only ensures that the automatic scaling of the web browser has been switched off.
+
+
+### Use `em` instead of `px` for a layout wrap (breakpoints)
+Performing the media query with the unit `em` is quite helpful, since the screen is measured in pixels. The advantage is that the media query then works correctly even if the font size is changed. This ensures that when the fonts are displayed larger, the next layout level is really triggered and the layout does not collapse.
+
+   ```
+    @media screen and (min-width: 640px) {
+        /* CSS statement for for screens from 640px width */
+    }
+   ```
+
+A breakpoint has been set up here for screens 640 pixels and larger. All CSS statements between the curly brackets are thus only executed from a screen width of 640 pixels. Referring to the recommendation to use the unit `em` for such breakpoints, the screen size only has to be divided by 16. 16 pixels is usually the browser base font size. 640 pixels divided by `16px` is `40em`. 
+
+This means then:
+
+   ```
+    /* 640px / 16px = 40em */
+    @media screen and (min-width: 40em) {
+        /* CSS statement for for screens from 640px width */
+    }
+   ```
+
+
+### Breakpoints
+The layout is changed during these wraps. In practice, different layouts for different resolutions are provided here, which can be controlled with media queries.
+
+   ```
+    /* CSS statement for for screens from 640px width */
+
+    /* 640px / 16px = 40em */
+    @media screen and (min-width: 40em) {
+        /* CSS statement for for screens from 640px width */
+    }
+
+    /* 1024px / 16px = 64em */
+    @media screen and (min-width: 64em) {
+        /* CSS statement for for screens from 1024px width */
+    }
+
+    /* 1280px / 16px = 80em */
+    @media screen and (min-width: 80em) {
+        /* CSS statement for for screens from 1280px width */
+    }
+   ```
+
+Here three common breakpoints have been defined with media queries. The statements are definitely executed before the first breakpoint. Here, in addition to the basic CSS properties, the mobile layout for smartphones can also be defined right away. Subsequently is still for the screen widths 640 pixels (tablets), 1024 pixels (desktop) and 1280 pixels (extra large desktop).
+
+
+### `box-sizing: border-box;`
+By using the box model with `border-box`, you do not need to calculate with `width`, `padding` and `border`. This CSS statement should be set right at the beginning.
+
+   ```
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+   ```
+
+#### Media queries are now understood by all major web browsers. Browsers that cannot handle media queries, the browser uses the base version of the website that was defined before the first breakpoint with a media query. Therefore, it is always recommended to create a base version before the media queries. 
+
+
+## 6.2. Create a responsive layout
