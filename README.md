@@ -582,6 +582,28 @@ Here is the mobile version + desktop version:
     }    
 
    ```
+Desktop version:
+
  ![Preview](6_Responsive_Layouts/images/Preview_6_3A.png)
 
+Smartphone version:
+
  ![Preview](6_Responsive_Layouts/images/Preview_6_3B.PNG)
+
+Here you can see that the view automatically adapts to the screen, i.e. smartphone or desktop.
+
+More examples: 
+
+ example --> *6_Responsive_Layouts/Part_4/styles/layout.css*
+
+Desktop version:
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_3A.png)
+
+Smartphone version:
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_3B.PNG)
+
+Extra Large Desktop Version:
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_4C.png)
