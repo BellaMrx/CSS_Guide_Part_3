@@ -34,6 +34,7 @@
 6. Responsive layouts with CSS
     - 6.1. Theoretical basic knowledge about responsive web design
     - 6.2. Create a responsive layout
+    - 6.3. Responsive layouts with images
 
 
 --------------------------------------------------------------------------------------------
@@ -442,91 +443,15 @@ Here is the mobile version + desktop version:
     /* --------------------------------------------------
             General basic settings                              
     ----------------------------------------------------*/
-    html {
-        box-sizing: border-box;
-    }
 
-    *, *::before, *::after {
-        box-sizing: inherit; 
-    }
-
-    body {
-        color: #1d2731;            
-        background-color: #efefef;
-        font-family: Georgia; 
-    }
-
-    ul {
-        padding: 0;
-    }
-
-    .wrapper {
-        background-color: #ff383f; 
-    }
+    ...
 
     /* ------------------------------------------------------------------
           CSS properties for mobile devices (smaller than 640 px)            
             + Arrange everything in one column below each other                                             
     -------------------------------------------------------------------- */
-    .header {
-        text-align: center;
-        padding: 1em;
-        background-color: #55b079; 
-        color: #efefef;  
-        border-bottom: 1px solid #efefef;
-    }
 
-    .aside {
-        border-top: 1px solid #a9a9a9;
-        padding-top: 0.5em;
-    }
-
-    .footer {
-        background-color: #a9a9a9; 
-        color: #efefef; 
-        padding: 1em;
-        text-align: center; 
-        border-top: 1px solid #efefef;
-    }
-
-    .nav-ul {
-        background-color: #ff383f; 
-        margin:0;
-    }
-
-    .nav-li {
-        list-style: none;
-        margin-left: 0;
-        border-bottom: 1px solid #efefef;
-    }
-
-    .nav-li-a  {
-        padding: 0.6em 2rem;
-        display: block; 
-    }
-
-    .nav-ul a:link {
-        text-decoration: none; 
-    }
-
-    .nav-ul a:link, .nav-ul a:visited {
-        color: #fff; 
-    }
-
-    .nav-ul a:hover, .nav-ul a:focus, .nav-ul a:active {
-        background-color: #000; 
-        color: #efefef; 
-    }
-
-    .nav-active {
-        color: #000; 
-        background-color: #fff; 
-    }
-
-    .container {
-        background-color: #fff; 
-        padding: 2em 2rem;
-    }
+    ...
 
     /*-----------------------------------------------------   
         Tablet version from 640 pixel                          
@@ -607,3 +532,18 @@ Smartphone version:
 Extra Large Desktop Version:
 
  ![Preview](6_Responsive_Layouts/images/Preview_6_4C.png)
+
+
+ example --> *6_Responsive_Layouts/Part_4/styles/layout.css*
+
+The examples created in this way now flexibly adapt to the layout breaks with the media queries to the user's devices.
+
+
+### Relative font sizes
+Relative specifications should always be used instead of pixels for font sizes. On screens with a higher pixel density, fonts that are specified with pixels are displayed relatively small. It is possible to zoom in on them later, but a website should be rendered legibly immediately after loading. Therefore, pixels should be avoided and relative specifications such as em, rem or percent should be used.
+
+
+## 6.3. Responsive layouts with images
+
+
+
