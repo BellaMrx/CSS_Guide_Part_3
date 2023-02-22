@@ -274,3 +274,162 @@ By using the box model with `border-box`, you do not need to calculate with `wid
 
 
 ## 6.2. Create a responsive layout
+Whether a website is first created as a desktop version or as a mobile version, everyone should decide for themselves and also depends on how the page is used. But today it is recommended to start with the mobile version first, because most users consider the mobile version first.
+
+Here is the mobile version first:
+
+ example --> *6_Responsive_Layouts/Part_2/index.html*
+   ```
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>mobile version</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/layout.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                Responsive web design - Logo
+            </header>
+            <nav>
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="#" title="dummy" class="nav-li-a">Home</a></li>
+                    <li class="nav-li"><a href="#" title="dummy" class="nav-li-a">Portfolio</a></li>
+                    <li class="nav-li nav-active"><strong class="nav-li-a">Blog</strong></li>
+                    <li class="nav-li"><a href="#" title="dummy" class="nav-li-a">Contact</a></li>
+                    <li class="nav-li"><a href="#" title="dummy" class="nav-li-a">Legal Notice</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <main class="content">
+                    <article class="article">
+                        <h2>Article 1</h2>
+                        <p>Lorem ipsum ... </p>
+                    </article>
+                    <article class="article">
+                        <h2>Article 2</h2>
+                        <p>Phasellus viverra ...</p>
+                    </article>
+                    <article class="article clear">
+                        <h2>Article 3</h2>
+                        <p>Donec pede ...</p>
+                    </article>
+                    <article class="article">
+                        <h2>Article 4</h2>
+                        <p>Lorem ipsum ...</p>
+                    </article>
+                </main>
+                <aside class="aside">
+                    <h3>About the author</h3>
+                    <p>Lorem ipsum ... </p>
+                    <p>Cras dapibus... </p>
+                </aside>
+            </div>
+            <footer class="footer">
+                Footer - &copy;&nbsp;2023
+            </footer>
+        </div>
+    </body>
+
+</html>
+   ```
+
+ example --> *6_Responsive_Layouts/Part_2/styles/layout.css*
+   ```
+    @charset "UTF-8";
+    /* --------------------------------------------------
+            General basic settings                             
+     ----------------------------------------------------*/
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+        box-sizing: inherit; 
+    }
+
+    body {
+        color: #1d2731;
+        background-color: #efefef; 
+        font-family: Georgia; 
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    .wrapper {
+        background-color: #ff383f; 
+    }
+
+    /* ------------------------------------------------------------------
+        CSS properties for mobile devices (smaller than 640 px)            
+        + Arrange everything in one column below each other                                              
+    -------------------------------------------------------------------- */
+    .header {
+        text-align: center;
+        padding: 1em ;
+        background-color: #55b079; 
+        color: #efefef;  
+        border-bottom: 1px solid #efefef;
+    }
+
+    .aside {
+        border-top: 1px solid #a9a9a9;
+        padding-top: 0.5em;
+    }
+
+    .footer {
+        background-color: #a9a9a9; 
+        color: #efefef;
+        padding: 1em;
+        text-align: center; 
+        border-top: 1px solid #efefef;
+    }
+
+    .nav-ul {
+        background-color: #ff383f;
+        margin:0;
+    }
+
+    .nav-li {
+        list-style: none;
+        margin-left: 0;
+        border-bottom: 1px solid #efefef;
+    }
+
+    .nav-li-a  {
+        padding: 0.6em 2rem;
+        display: block; 
+    }
+
+    .nav-ul a:link {
+        text-decoration: none; 
+    }
+
+    .nav-ul a:link, .nav-ul a:visited {
+        color: #fff; 
+    }
+
+    .nav-ul a:hover, .nav-ul a:focus, .nav-ul a:active {
+        background-color: #000; 
+        color: #efefef; 
+    }
+
+    .nav-active {
+        color: #000; 
+        background-color: #fff; 
+    }
+
+    .container {
+        background-color: #fff; 
+        padding: 2em 2rem;
+    }
+   ```
+ ![Preview](6_Responsive_Layouts/images/Preview_6_2A.PNG)
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_2B.PNG)
