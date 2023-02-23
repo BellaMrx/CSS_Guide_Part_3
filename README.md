@@ -548,6 +548,7 @@ With a fixed image size, the text can slip away towards the bottom, and individu
 
  example --> *6_Responsive_Layouts/Part_6/styles/layout.css*
    ```
+    ...
     .img-art {
         float: left;
         margin: 0 1em 0.2em 0;
@@ -561,6 +562,7 @@ With a fixed image size, the text can slip away towards the bottom, and individu
         max-width: 40%;
         height: auto;
     }
+    ...
 
    ```
  ![Preview](6_Responsive_Layouts/images/Preview_6_6A.png)
@@ -568,4 +570,84 @@ With a fixed image size, the text can slip away towards the bottom, and individu
  ![Preview](6_Responsive_Layouts/images/Preview_6_6B.PNG)
 
 
+### Flexible images in maximum possible width
+If images should always be expanded over the full width regardless of the device and still remain responsive, `max-width` can be set to 100%. This also depends on where the image is placed. Setting an image to 100% means that an image will not be responsive until the column it is defined in is smaller than the image. It also depends on the context in which the image is used.
+
+ example --> *6_Responsive_Layouts/Part_6/index.html*
+   ```
+    ...
+    <header class="header">
+        <img src="images/logo.jpg" alt="Logo" class="img-logo">
+    </header>
+    ...
+
+   ```
+
+ example --> *6_Responsive_Layouts/Part_6/styles/layout.css*
+   ```
+    ...
+    .img-logo {
+        max-width: 100%;
+        height: auto;
+    }
+    ...
+
+   ```
+
+With `<video>` it works the same way as with images.
+
+
+### Hide images
+To hide images in a certain version, here for example for smartphones you can set `display` to `none`. On the desktop screen, the logo remains visible.
+For the other layout wraps you have to make the header visible again with `display: block`.
+
+ example --> *6_Responsive_Layouts/Part_7/styles/layout.css*
+   ```
+    ...
+    .img-logo {
+        display: none;
+    }
+
+    ...
+
+    /*-----------------------------------------------------   
+        Tablet version from 640 pixel                          
+    ------------------------------------------------------*/
+
+    .img-logo {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    ...
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Preview_7.PNG)
+
+
+### Load pictures matching the screen width with `<picture>`
+The disadvantage of `max-width` is that with small displays often large files must be loaded, this is bad for the Performence and the pictures must be scaled down, which affects the picture quality negatively. 
+The `<picture>` element, serves as a container element for multiple image sources. The individual image sources are specified with `source`.
+
+
+ example --> *6_Responsive_Layouts/Part_8/index.html*
+   ```
+    ...
+
+    <header class="header">
+        <picture class="img-logo">
+            <source media="(min-width: 1023px)" srcset="images/logo-desktop.jpg 1x,images/logo-desktop-HD.jpg 2x">
+            <source media="(min-width: 639px)" srcset="images/logo-tablet.jpg 1x,images/logo-tablet-HD.jpg 2x">
+            <source srcset="images/logo-smartphone.jpg 1x,images/logo-smartphone-HD.jpg 2x">
+            <!-- Fallback for browsers that can't do <picture> -->
+            <img src="images/logo.jpg" alt="Logo" class="img-logo">
+        </picture>
+    </header>
+
+    ...
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_8A.PNG)
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_8B.PNG)
 
