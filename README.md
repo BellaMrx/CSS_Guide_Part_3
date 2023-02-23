@@ -35,6 +35,7 @@
     - 6.1. Theoretical basic knowledge about responsive web design
     - 6.2. Create a responsive layout
     - 6.3. Responsive layouts with images
+    - 6.4. The CSS Grid Layout
 
 
 --------------------------------------------------------------------------------------------
@@ -622,7 +623,7 @@ For the other layout wraps you have to make the header visible again with `displ
     ...
    ```
 
- ![Preview](6_Responsive_Layouts/images/Preview_7.PNG)
+ ![Preview](6_Responsive_Layouts/images/Preview_6_7.PNG)
 
 
 ### Load pictures matching the screen width with `<picture>`
@@ -651,3 +652,22 @@ The `<picture>` element, serves as a container element for multiple image source
 
  ![Preview](6_Responsive_Layouts/images/Preview_6_8B.PNG)
 
+
+### Use area covering images
+When a background image is inserted with `background-image`, the height and width can be adjusted with the CSS property `background.size`.
+
+ example --> *6_Responsive_Layouts/Part_9/styles/layout.css*
+   ```
+    ...
+
+    .img-background {
+        background-size: cover;
+        background-image: url("../images/background.jpg");
+        background-repeat: no-repeat;
+    }
+
+    ...
+   ```
+
+
+## 6.4. The CSS Grid Layout

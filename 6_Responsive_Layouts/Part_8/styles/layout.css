@@ -210,7 +210,7 @@ ul {
 	    + 3 columns
         - Header on top
         - Navigation, main content and sidebars next to each other
-		* Two articles in main content side by side
+		    * Two articles in main content side by side
         - Footer at the bottom
   -------------------------------------------------------------------- */
 @media screen and (min-width: 80em) {
