@@ -544,6 +544,28 @@ Relative specifications should always be used instead of pixels for font sizes. 
 
 
 ## 6.3. Responsive layouts with images
+With a fixed image size, the text can slip away towards the bottom, and individual words can be left at the top if there is not enough space. This text wrapping can be avoided by setting the maximum width of the image with the CSS property `max-width` accordingly in percent. With `max-width` the maximum width of an element can be determined.
+
+ example --> *6_Responsive_Layouts/Part_6/styles/layout.css*
+   ```
+    .img-art {
+        float: left;
+        margin: 0 1em 0.2em 0;
+        max-width: 40%;
+        height: auto;
+    }
+
+    .img-side {
+        float: left;
+        margin: 0.1em 1em 0.2em 0.2em;
+        max-width: 40%;
+        height: auto;
+    }
+
+   ```
+ ![Preview](6_Responsive_Layouts/images/Preview_6_6A.png)
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_6B.PNG)
 
 
 
