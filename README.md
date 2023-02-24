@@ -706,7 +706,7 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
 
  example --> *6_Responsive_Layouts/Part_10/index.html*
 
-    ```
+   ```
     <body>
         <div class="grid">
             <header class="header">
@@ -728,9 +728,10 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
     </body>
    ```
 
-![Preview](6_Responsive_Layouts/images/Preview_6_10A.PNG)
 
-![Preview](6_Responsive_Layouts/images/Preview_6_10B.png)
+ ![Preview](6_Responsive_Layouts/images/Preview_6_10A.PNG)
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_10B.png)
 
 
 
