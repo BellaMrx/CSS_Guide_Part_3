@@ -733,9 +733,6 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
 
  ![Preview](6_Responsive_Layouts/images/Preview_6_10A.PNG)
 
- ![Preview](6_Responsive_Layouts/images/Preview_6_10B.png)
-
-
 
 ### Place elements in the grid
 With `grid-row-start` and `grid-row-end` or `grid-column-start` and `grid-column-end` you can specify where the HTML elements should be placed in the grid.
