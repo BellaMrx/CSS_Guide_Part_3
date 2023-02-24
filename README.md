@@ -728,9 +728,9 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
     </body>
    ```
 
- ![Preview](6_Responsive_Layouts/images/Preview_6_10A.PNG)
+![Preview](6_Responsive_Layouts/images/Preview_6_10A.PNG)
 
- ![Preview](6_Responsive_Layouts/images/Preview_6_10B.png)
+![Preview](6_Responsive_Layouts/images/Preview_6_10B.png)
 
 
 
