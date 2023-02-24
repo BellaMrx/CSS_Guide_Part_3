@@ -702,7 +702,10 @@ The grid can be adjusted as desired.
 
 This defines a grid layout with five rows and ten columns. The header area is specified with a height of 150 pixels and the footer area with 100 pixels. The three rows in between automatically adjust to the content. `repeat (10, 10%)` means `10% 10% 10% 10% 10% 10% 10% 10% 10% 10%`.
 
-To use the grid layout, the class selector `.grid` must be used in the parent element, whose child elements are positioned in this grid.
+ ![Preview](6_Responsive_Layouts/images/Grid2.png)
+ 
+
+To use the grid layout, the class selector `.grid` must be used in the parent element, whose child elements are positioned in this grid. Inside the `div` parent element the child elements are placed (`<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>`).
 
  example --> *6_Responsive_Layouts/Part_10/index.html*
 
@@ -735,6 +738,7 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
 
 
 
+### Place elements in the grid
 
 
 
