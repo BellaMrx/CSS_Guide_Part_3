@@ -703,7 +703,6 @@ The grid can be adjusted as desired.
 This defines a grid layout with five rows and ten columns. The header area is specified with a height of 150 pixels and the footer area with 100 pixels. The three rows in between automatically adjust to the content. `repeat (10, 10%)` means `10% 10% 10% 10% 10% 10% 10% 10% 10% 10%`.
 
  ![Preview](6_Responsive_Layouts/images/Grid2.png)
- 
 
 To use the grid layout, the class selector `.grid` must be used in the parent element, whose child elements are positioned in this grid. Inside the `div` parent element the child elements are placed (`<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>`).
 
@@ -739,7 +738,151 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
 
 
 ### Place elements in the grid
+With `grid-row-start` and `grid-row-end` or `grid-column-start` and `grid-column-end` you can specify where the HTML elements should be placed in the grid.
+
+ example --> *6_Responsive_Layouts/Part_10/styles/layout.html*
+
+   ```
+    .header {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: right;
+        background-color: #07889b;
+        color: #efefef;
+        border-bottom: 1px solid #efefef;
+    }
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Grid3.png)
 
 
+   ```
+    .nav {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .content {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .aside {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .footer {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Grid4.png)
 
 
+#### Shorthand
+
+   ```
+    .aside {
+        grid-column: 1 / 11;
+        grid-row: 4 / 5;
+    }
+
+   ```
+
+means
+
+   ```
+    .aside {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+   ```
+
+There is another shorter variant, with the `grid-area` property, the order is as follows:
+
+`grid-area: row-start / column-start / row-end / column-end;`
+
+   ```
+    .aside {
+        grid-area: 4 / 1 / 5 / 11;
+    }
+
+   ```
+
+#### Place elements in next layout wrap
+Starting from the basic mobile layout version, little work is now needed to respond to the next layout change for the tablet version.
+
+ ![Preview](6_Responsive_Layouts/images/Grid5.png)
+
+ example --> *6_Responsive_Layouts/Part_10/styles/layout.html*
+
+   ```
+    @media screen and (min-width: 40em) {
+        .content {
+            grid-column: 1 / 8;
+            grid-row: 3 / 4;
+            padding: 0 1rem 0 2rem;
+        }
+        .aside {
+            grid-column: 8 / 11;
+            grid-row: 3 / 4;
+            padding: 0 2rem 0 2rem;
+            border-top: none;
+        }
+        ...
+    }
+   ```
+
+Tablet-Version
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_10C.png)
+
+
+And yet another version for the desktop:
+
+ ![Preview](6_Responsive_Layouts/images/Grid6.png)
+
+ example --> *6_Responsive_Layouts/Part_10/styles/layout.html*
+
+   ```
+    @media screen and (min-width: 64em) {
+        .content {
+            grid-column: 3 / 8;
+            grid-row: 2 / 4;
+            padding: 1em 1.5em;
+        }
+        .aside {
+            grid-column: 8 / 11;
+            grid-row: 2 / 4;
+            padding: 1em 1.5em;
+        }
+        .nav {
+            grid-column: 1 / 3;
+            grid-row: 2 / 4;
+            background-color: #ff383f;
+        }
+        ...
+    }
+   ```
+
+Desktop-Version
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_10B.png)
+
+
+### Layout modification
