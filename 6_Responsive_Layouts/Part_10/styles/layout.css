@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+/* --------------------------------------------------
+        General basic settings                              
+ ----------------------------------------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #1d2731;
+    background-color: #efefef;
+    font-family: Georgia;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 150px auto auto auto 100px;
+    grid-template-columns: repeat(10, 10%);
+}
+
+
+/* ------------------------------------------------------------------
+      CSS properties for mobile devices (smaller than 640 px)            
+       + Arrange everything in one column below each other                                                  
+-------------------------------------------------------------------- */
+
+.header {
+    grid-column: 1 / 11;
+    grid-row: 1 / 2;
+    text-align: right;
+    background-color: #07889b;
+    color: #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+.nav {
+    grid-column: 1 / 11;
+    grid-row: 2 / 3;
+}
+
+.nav-ul {
+    background-color: #ff383f;
+    margin: 0;
+}
+
+.nav-li {
+    list-style: none;
+    margin-left: 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.nav-li-a {
+    padding: 0.6em 2rem;
+    display: block;
+}
+
+.nav-ul a:link {
+    text-decoration: none;
+}
+
+.nav-ul a:link, .nav-ul a:visited {
+    color: #fff;
+}
+
+.nav-ul a:hover, .nav-ul a:focus, .nav-ul a:active {
+    background-color: #000;
+    color: #efefef;
+}
+
+.nav-active {
+    color: #000;
+    background-color: #fff;
+}
+
+.content {
+    grid-column: 1 / 11;
+    grid-row: 3 / 4;
+    padding: 0 1rem 0 2rem;
+}
+
+.aside {
+    grid-column: 1 / 11;
+    grid-row: 4 / 5;
+    border-top: 1px solid #a9a9a9;
+    padding: 0 1rem 0 2rem;
+}
+
+.footer {
+    grid-column: 1 / 11;
+    grid-row: 5 / 6;
+    background-color: #a9a9a9;
+    color: #efefef;
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #efefef;
+}
+
+.img-art {
+    float: left;
+    margin: 0 1em 0.2em 0;
+    max-width: 40%;
+    height: auto;
+}
+
+.img-side {
+    float: left;
+    margin: 0.1em 1em 0.2em 0.2em;
+    max-width: 40%;
+    height: auto;
+}
+
+.img-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*-----------------------------------------------------   
+    Tablet version from 640 pixel                          
+    640px / 16px/em = 40em  
+        + 2 columns
+        - Header and navigation on top below each other
+	    - Main content and sidebar next to each other
+		- Footer bar at the bottom.
+------------------------------------------------------*/
+
+@media screen and (min-width: 40em) {
+    .header {
+        text-align: right;
+    }
+    .content {
+        grid-column: 1 / 8;
+        grid-row: 3 / 4;
+        padding: 0 1rem 0 2rem;
+    }
+    .aside {
+        grid-column: 8 / 11;
+        grid-row: 3 / 4;
+        padding: 0 2rem 0 2rem;
+        border-top: none;
+    }
+    .nav-ul {
+        padding: 0 2rem;
+        overflow: hidden;
+    }
+    .nav-li {
+        float: left;
+        display: inline-block;
+        border: none;
+        width: auto;
+    }
+    .nav-li-a {
+        padding: 0.7em 1.2rem;
+        display: inline-block;
+    }
+}
+
+
+/*------------------------------------------------------------------
+    Screens from 1024 pixels                         
+    1024px / 16px/em = 64em
+        + 3 columns
+        - Header on top
+        - Navigation, main content and sidebars next to each other
+        - Footer at the bottom			
+ ------------------------------------------------------------------- */
+
+@media screen and (min-width: 64em) {
+    .content {
+        grid-column: 3 / 8;
+        grid-row: 2 / 4;
+        padding: 1em 1.5em;
+    }
+    .aside {
+        grid-column: 8 / 11;
+        grid-row: 2 / 4;
+        padding: 1em 1.5em;
+    }
+    .nav {
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+        background-color: #ff383f;
+    }
+    .nav-ul {
+        box-shadow: none;
+        margin: 1em 0;
+        padding: 0;
+    }
+    .nav-li {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .nav-li-a {
+        padding: 0.5em 3rem;
+        display: block;
+    }
+}
+
+
+/*------------------------------------------------------------------- 
+    Large screens (>1280 pixels) 
+    1280px / 16px/em = 80em
+	    + 3 columns
+        - Header on top
+        - Navigation, main content and sidebars next to each other
+		* Two articles in main content side by side
+        - Footer at the bottom
+  -------------------------------------------------------------------- */
+
+@media screen and (min-width: 80em) {
+    .grid {
+        margin: 0 auto;
+        max-width: 80em;
+    }
+    .clear {
+        clear: both;
+    }
+}

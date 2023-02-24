@@ -671,3 +671,70 @@ When a background image is inserted with `background-image`, the height and widt
 
 
 ## 6.4. The CSS Grid Layout
+In the previous examples, it is quite time-consuming to realize a more complex layout or to redesign it. For such purposes the grid layout is a good choice. CSS offers real design grids with CSS grid layouts.
+
+
+### Creating a grid for content
+The principle of a CSS grid is based on creating a grid in a parent element and positioning the child elements within it. To do this, assign the value `grid` to the CSS property `display` in the parent element and then use the properties `grid-template-columns` and `grid-template-rows` to define the individual grid lines.
+
+   ```
+    grid {
+        display: grid;
+        grid-template-rows: 150px auto auto 100px;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+   ```
+
+This creates a CSS grid with four rows and five columns. The first row is 150 pixels high and the last 100 pixels high. The middle two rows are still adjusted with `auto` according to the content. All five columns are 20% wide. Besides the units percent or pixel, you can also use `em` or `fr`(e.g. 1fr or 2fr). The unit `fr` means *flexible fragment* (fractional part). 
+
+ ![Preview](6_Responsive_Layouts/images/Grid1.png)
+
+
+The grid can be adjusted as desired.
+
+   ```
+    grid {
+        display: grid;
+        grid-template-rows: 150px auto auto auto 100px;
+        grid-template-columns: repeat (10, 10%);
+    }
+   ```
+
+This defines a grid layout with five rows and ten columns. The header area is specified with a height of 150 pixels and the footer area with 100 pixels. The three rows in between automatically adjust to the content. `repeat (10, 10%)` means `10% 10% 10% 10% 10% 10% 10% 10% 10% 10%`.
+
+To use the grid layout, the class selector `.grid` must be used in the parent element, whose child elements are positioned in this grid.
+
+ example --> *6_Responsive_Layouts/Part_10/index.html*
+
+    ```
+    <body>
+        <div class="grid">
+            <header class="header">
+                ...
+            </header>
+            <nav class="nav">
+                ...
+            </nav>
+            <main class="content">
+                ...
+            </main>
+            <aside class="aside">
+                ...
+            </aside>
+            <footer class="footer">
+                ...
+            </footer>
+        </div>
+    </body>
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_10A.PNG)
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_10B.png)
+
+
+
+
+
+
+
