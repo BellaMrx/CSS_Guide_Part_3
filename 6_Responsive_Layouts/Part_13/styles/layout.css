@@ -1,0 +1,39 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    background-color: LightSeaGreen;
+    max-width: 60em;
+}
+
+section {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    width: 90%;
+    width: calc(100% / 4);
+}
+
+@media screen and (max-width: 40em) {
+    .column {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 30em) {
+    .column {
+        width: 100%;
+    }
+}

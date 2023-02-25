@@ -37,7 +37,8 @@
     - 6.3. Responsive layouts with images
     - 6.4. The CSS Grid Layout
     - 6.5. Change the behavior of HTML elements with `display`
-    - 6.6. Calculation with the `calc()` function
+    - 6.6. Calculation with CSS and the `calc()` function
+7. Styling with CSS
 
 
 --------------------------------------------------------------------------------------------
@@ -1031,9 +1032,76 @@ With `display: none;` elements can be hidden, the web browser does not create a 
 
 #### Further values for `display`
 Besides `display: grid` and `display: flex` (which I have already discussed here), another form is `display: table;`. With this, elements can be arranged like in a table and in practice, theoretically, a layout for a web page can be created. But for that `display: grid` is the better alternative. 
-Then there is also `display: list-item;, which displays the element as a list. This creates two boxes for an element. One box is used for the list item and the other box for the list element.
+Then there is also `display: list-item;`, which displays the element as a list. This creates two boxes for an element. One box is used for the list item and the other box for the list element.
 There are other values for `display`, but they are rarely used. An overview of the existing values can be found at [MDN - display](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 
+ example --> *6_Responsive_Layouts/Part_12/indexE.html*
 
-## 6.6. Calculation with the `calc()` function
+   ```
+    .table {
+        display: table;
+    }
+
+    .row {
+        display: table-row;
+    }
+
+    .article {
+        border: 1px solid black;
+        padding: 1em;
+        width: 33.3333%;
+        background-color: LightSeaGreen;
+        display: table-cell;
+    }
+
+    .bottom {
+        vertical-align: bottom;
+    }
+
+    .middle {
+        vertical-align: middle;
+    }
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_12E.PNG)
+
+
+## 6.6. Calculation with CSS and the `calc()` function
+Sometimes it is helpful to calculate and display individual values. This is possible with the `calc()` function, with which the basic arithmetic operations addition(+), subtraction(-), multiplication(*) and division(/) can be carried out. It is important that with the addition and subtraction, before and after a blank character must stand. This is not necessary for multiplication and division.
+
+ example --> *6_Responsive_Layouts/Part_13/styles/layout.css*
+
+   ```
+    .column {
+        float: left;
+        padding: 10px;
+        width: 90%;
+        width: calc(100% / 4);
+    }
+
+    @media screen and (max-width: 40em) {
+        .column {
+            width: calc(100% / 2);
+        }
+    }
+
+    @media screen and (max-width: 30em) {
+        .column {
+            width: 100%;
+        }
+    }
+   ```
+
+Desktop-Version
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_13A.PNG)
+
+Tablet-Version
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_13B.png)
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+# 7. Styling with CSS
 

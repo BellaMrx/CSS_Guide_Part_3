@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Three-column layout with display:table</title>
+    <meta charset="UTF-8">
+    <style>
+      body {
+        min-width: 720px;
+        max-width: 60em;
+        margin: 0 auto;
+        background-color: #efefef;
+        font-family: Georgia; 
+      }
+
+      .table {
+        display: table;
+      }
+
+      .row {
+        display: table-row;
+      }
+
+      .article {
+        border: 1px solid black;
+        padding: 1em;
+        width: 33.3333%;
+        background-color: LightSeaGreen;
+        display: table-cell;
+      }
+
+      .bottom {
+        vertical-align: bottom;
+      }
+
+      .middle {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>display: table;</h1>
+    <div class="table">
+      <div class="row">
+        <article class="article bottom">
+          <h2>vertical-align:bottom;</h2>
+          <p>Nulla consequat massa quis enim.</p>
+        </article>
+        <article class="article middle">
+          <h2>vertical-align: middle;</h2>
+          <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </article>
+        <article class="article">
+          <h2>vertical-align: top;</h2>
+          <p> Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </article>
+      </div>
+      <div class="row">
+        <article class="article">
+          <h2>vertical-align: top;</h2>
+          <p>Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
+        </article>
+        <article class="article middle">
+          <h2>vertical-align: top;</h2>
+          <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </article>
+        <article class="article bottom">
+          <h2>vertical-align: bottom;</h2>
+          <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
