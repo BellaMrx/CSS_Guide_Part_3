@@ -36,6 +36,7 @@
     - 6.2. Create a responsive layout
     - 6.3. Responsive layouts with images
     - 6.4. The CSS Grid Layout
+    - 6.5. Change the behavior of HTML elements with `display`
 
 
 --------------------------------------------------------------------------------------------
@@ -883,3 +884,67 @@ Desktop-Version
 
 
 ### Layout modification
+Because the elements in the grid are freely positionable, it is easy to redesign the layout now. For this, only the positions of the cells and columns in the grid have to be adjusted.
+To change the desktop version from the previous example, you can simply change the values for `grid-column` as follows:
+
+ example --> *6_Responsive_Layouts/Part_11/styles/layout.html*
+
+   ```
+    @media screen and (min-width: 64em) {
+        .content {
+            grid-column: 4 / 9;
+            grid-row: 2 / 4;
+            padding: 1em 1.5em;
+        }
+        .aside {
+            grid-column: 1 / 4;
+            grid-row: 2 / 4;
+            padding: 1em 1.5em;
+        }
+        .nav {
+            grid-column: 9 / 11;
+            grid-row: 2 / 4;
+            background-color: #ff383f;
+        }
+        ...
+    }
+   ```
+
+Desktop-Version
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_11.png)
+
+So the navigation is now on the right side.
+
+
+### The spacing between grid lines
+If spacing between columns or rows should be added, this can be done with `grid-column-gap` or `grid-row-gap`. The spaces are only created between the columns. No spacing is added at the beginning and end of the column.
+
+for example:
+
+   ```
+    grid {
+        display: grid;
+        grid-template-rows: 150px auto auto auto 100px;
+        grid-template-columns: repeat (10, 10%);
+        grid-row-gap: 15px;
+        grid-column-gap: 10px;
+    }
+   ```
+
+the shorthand is:
+    `grid-gap: 15px 10px;`
+
+
+#### Align elements in CSS grid
+Also the horizontal and vertical alignment of the parent elements can be set with the CSS property `align-items` for vertical and with `justify-items` for horizontal behavior. The values `start`, `end`, `stretch` and `center` are available. 
+For an individual alignment of a single raster cell, `align-self` and `justify-self` are available. Here, too, the values `start`, `end`, `stretch` and `center` are available.
+
+
+## 6.5. Change the behavior of HTML elements with `display`
+The CSS property `display` can be used to change the behavior of an HTML element when it is displayed in the web browser. The HTML element has a fixed box that describes the behavior of the element. 
+Thus, the behavior of an HTML element such as `<p>` can be changed with `display: inline;` and thus no more line breaks are executed.
+On the other hand, the behavior of an element like `<a>` can be changed with `display: block` so that it performs a line break. With `display: none;` an element can be hidden so that it no longer takes up space in the HTML document.
+
+
+### `block`, `inline` and `inline-block`
