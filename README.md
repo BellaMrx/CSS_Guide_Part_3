@@ -1015,7 +1015,7 @@ An `inline-block` -box initially behaves like an `inline` -box and runs over one
 
  example --> *6_Responsive_Layouts/Part_12/indexD.html*
 
-    ```
+   ```
      p { 
       display: none;
       width: 150px;
@@ -1024,6 +1024,7 @@ An `inline-block` -box initially behaves like an `inline` -box and runs over one
       padding: 1em;
     }
    ```
+
 
 With `display: none;` elements can be hidden, the web browser does not create a box for this. It is also possible to hide elements with `visibility: hidden;`, but the box remains, and the element becomes only transparent. Hidden or transparent elements are used, for example, to show buttons only in the smartphone version but not in the desktop version.
 
