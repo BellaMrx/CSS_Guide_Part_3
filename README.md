@@ -37,6 +37,7 @@
     - 6.3. Responsive layouts with images
     - 6.4. The CSS Grid Layout
     - 6.5. Change the behavior of HTML elements with `display`
+    - 6.6. Calculation with the `calc()` function
 
 
 --------------------------------------------------------------------------------------------
@@ -738,7 +739,7 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
 ### Place elements in the grid
 With `grid-row-start` and `grid-row-end` or `grid-column-start` and `grid-column-end` you can specify where the HTML elements should be placed in the grid.
 
- example --> *6_Responsive_Layouts/Part_10/styles/layout.html*
+ example --> *6_Responsive_Layouts/Part_10/styles/layout.css*
 
    ```
     .header {
@@ -827,7 +828,7 @@ Starting from the basic mobile layout version, little work is now needed to resp
 
  ![Preview](6_Responsive_Layouts/images/Grid5.png)
 
- example --> *6_Responsive_Layouts/Part_10/styles/layout.html*
+ example --> *6_Responsive_Layouts/Part_10/styles/layout.css*
 
    ```
     @media screen and (min-width: 40em) {
@@ -855,7 +856,7 @@ And yet another version for the desktop:
 
  ![Preview](6_Responsive_Layouts/images/Grid6.png)
 
- example --> *6_Responsive_Layouts/Part_10/styles/layout.html*
+ example --> *6_Responsive_Layouts/Part_10/styles/layout.css*
 
    ```
     @media screen and (min-width: 64em) {
@@ -887,7 +888,7 @@ Desktop-Version
 Because the elements in the grid are freely positionable, it is easy to redesign the layout now. For this, only the positions of the cells and columns in the grid have to be adjusted.
 To change the desktop version from the previous example, you can simply change the values for `grid-column` as follows:
 
- example --> *6_Responsive_Layouts/Part_11/styles/layout.html*
+ example --> *6_Responsive_Layouts/Part_11/styles/layout.css*
 
    ```
     @media screen and (min-width: 64em) {
@@ -948,3 +949,90 @@ On the other hand, the behavior of an element like `<a>` can be changed with `di
 
 
 ### `block`, `inline` and `inline-block`
+
+- `display: block;`
+
+ example --> *6_Responsive_Layouts/Part_12/indexA.html*
+
+   ```
+    p { 
+      display: block;
+      width: 150px;
+      border: 1px solid black;
+      background-color: white;
+      padding: 1em;
+    }
+   ```
+
+In this example, `display: block;` can also be omitted, since the `<p>` element is a block element anyway, so a line break is automatically created.
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_12A.PNG)
+
+
+- `display: inline;`
+
+But if now `display: inline;` is used, the single `<p>` -elements are displayed in a row, so no automatic line break.
+
+ example --> *6_Responsive_Layouts/Part_12/indexB.html*
+
+   ```
+    p { 
+        display: inline;
+        width: 150px;
+        border: 1px solid black;
+        background-color: white;
+        padding: 1em;
+    }
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_12B.PNG)
+
+The specification of `width` is ignored and thus has no effect. Although the inner and outer margins and borders can be specified as usual, these specifications also have no effect on the line height. Thus, an `inline` box only occupies the width that the content requires. And may not look very nice, as in this example.
+
+
+- `display: inline-block;`
+
+ example --> *6_Responsive_Layouts/Part_12/indexC.html*
+
+   ```
+     p { 
+      display: inline-block;
+      width: 150px;
+      border: 1px solid black;
+      background-color: white;
+      padding: 1em;
+    }
+   ```
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_12C.PNG)
+
+ ![Preview](6_Responsive_Layouts/images/Preview_6_12C2.PNG)
+
+An `inline-block` -box initially behaves like an `inline` -box and runs over one line. But an `inline-block` -box is moved to the next cell when the box no longer fits in the screen width.
+
+
+- `display: none;`
+
+ example --> *6_Responsive_Layouts/Part_12/indexD.html*
+
+    ```
+     p { 
+      display: none;
+      width: 150px;
+      border: 1px solid black;
+      background-color: white;
+      padding: 1em;
+    }
+   ```
+
+With `display: none;` elements can be hidden, the web browser does not create a box for this. It is also possible to hide elements with `visibility: hidden;`, but the box remains, and the element becomes only transparent. Hidden or transparent elements are used, for example, to show buttons only in the smartphone version but not in the desktop version.
+
+
+#### Further values for `display`
+Besides `display: grid` and `display: flex` (which I have already discussed here), another form is `display: table;`. With this, elements can be arranged like in a table and in practice, theoretically, a layout for a web page can be created. But for that `display: grid` is the better alternative. 
+Then there is also `display: list-item;, which displays the element as a list. This creates two boxes for an element. One box is used for the list item and the other box for the list element.
+There are other values for `display`, but they are rarely used. An overview of the existing values can be found at [MDN - display](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+
+
+## 6.6. Calculation with the `calc()` function
+
