@@ -132,7 +132,7 @@ Thus, querying media features can be used in HTML with the `link` element or in 
 
 ### Basic structure of a media features query
 
- ![Preview](6_Responsive_Layouts/images/MediaQuery.png)
+ ![Preview](6_Responsive_Layouts/images/MediaQuery.jpg)
 
 
 #### Link the media features
