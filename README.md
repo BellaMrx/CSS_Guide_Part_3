@@ -2,7 +2,7 @@
 
  Detailed guide about CSS (all basics for CSS).
 
- Part 3 contains : Responsive layouts with CSS
+ Part 3 contains : Responsive layouts with CSS (Grid-Layouts).
 
  The code examples in the guide can be found in the listed folders.
 
