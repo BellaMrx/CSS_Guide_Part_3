@@ -738,7 +738,7 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
    ```
 
 
- ![Preview](6_Responsive_Layouts/images/Preview_6_10A.png)
+ ![Preview](6_Responsive_Layouts/images/Preview_6_10A.jpg)
 
 
 ### Place elements in the grid
@@ -918,7 +918,7 @@ To change the desktop version from the previous example, you can simply change t
 
 Desktop-Version
 
- ![Preview](6_Responsive_Layouts/images/Preview_6_11.PNG)
+ ![Preview](6_Responsive_Layouts/images/Preview_6_11.jpg)
 
 So the navigation is now on the right side.
 
