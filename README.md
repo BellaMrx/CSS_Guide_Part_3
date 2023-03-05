@@ -9,7 +9,7 @@
 -----------------------------------------------------------------------------------------
 
 ## Contents
-### [CSS Guide Part I]()
+### [CSS Guide Part I](https://github.com/BellaMrx/CSS_Guide)
 1. Introduction to CSS
     - 1.1. History of CSS 
     - 1.2. Principle of CSS application
@@ -22,7 +22,7 @@
     - 3.1 The principle of inheritance in CSS
     - 3.2. Understanding the control system of the cascade
     - 3.3. Pass values to CSS properties
-### [CSS Guide Part II]()
+### [CSS Guide Part II](https://github.com/BellaMrx/CSS_Guide_Part_2)
 4. The box model of CSS 
     - 4.1. The classic box model
     - 4.2. The newer alternative box model of CSS
@@ -41,8 +41,19 @@
     - 6.4. The CSS Grid Layout
     - 6.5. Change the behavior of HTML elements with `display`
     - 6.6. Calculation with CSS and the `calc()` function
-### [CSS Guide Part IV]()
+### [CSS Guide Part IV](https://github.com/BellaMrx/CSS_Guide_Part_4)
 7. Styling with CSS
+    - 7.1. Text design with CSS
+    - 7.2. Design lists with CSS
+    - 7.3. Tables with CSS
+    - 7.4. Images and graphics with `width` and `height`
+    - 7.5. Transfom elements
+    - 7.6. Style HTML forms with CSS
+8. Testing and organizing
+    - 8.1 Validate HTML and CSS
+    - 8.2. View websites in different sizes
+    - 8.3. Set up central stylesheet
+9. Useful websites about CSS
 
 
 --------------------------------------------------------------------------------------------
@@ -1107,7 +1118,7 @@ Tablet-Version
 
 -----------------------------------------------------------------------------------------------------------------
 
-This is the end of CSS Guide Part 3. You can find the next part here [CSS Guide Part IV]().
+This is the end of CSS Guide Part 3. You can find the next part here [CSS Guide Part IV](https://github.com/BellaMrx/CSS_Guide_Part_4).
 
 On my Twitter account [@bella_mrx](https://twitter.com/bella_mrx) you can find more useful stuff about HTML and web development. 
 
