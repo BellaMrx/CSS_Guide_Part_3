@@ -78,7 +78,7 @@ Instead of creating and maintaining countless layout versions for the same websi
 ### The use of specific media types
 Using the `link` element, CSS instructions are provided for the screen (`media="screen"`) and a special version for the printer (`media="print"`). If the media type is not defined, then the CSS instructions automatically apply to all output types (`media="all"`).
 
- example --> *6_Responsive_Layouts/Part_1*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/tree/main/6_Responsive_Layouts/Part_1) --> *6_Responsive_Layouts/Part_1*
 
 `media="screen"`
 
@@ -298,7 +298,7 @@ Whether a website is first created as a desktop version or as a mobile version, 
 
 Here is the mobile version first:
 
- example --> *6_Responsive_Layouts/Part_2/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_2/index.html) --> *6_Responsive_Layouts/Part_2/index.html*
    ```
     <!DOCTYPE html>
     <html lang="en">
@@ -358,7 +358,7 @@ Here is the mobile version first:
 </html>
    ```
 
- example --> *6_Responsive_Layouts/Part_2/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_2/styles/layout.css) --> *6_Responsive_Layouts/Part_2/styles/layout.css*
    ```
     @charset "UTF-8";
     /* --------------------------------------------------
@@ -456,7 +456,7 @@ Here is the mobile version first:
 
 Here is the mobile version + desktop version:
 
- example --> *6_Responsive_Layouts/Part_3/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_3/styles/layout.css) --> *6_Responsive_Layouts/Part_3/styles/layout.css*
    ```
     @charset "UTF-8";
     /* --------------------------------------------------
@@ -538,7 +538,7 @@ Here you can see that the view automatically adapts to the screen, i.e. smartpho
 
 More examples: 
 
- example --> *6_Responsive_Layouts/Part_4/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/tree/main/6_Responsive_Layouts/Part_4) --> *6_Responsive_Layouts/Part_4/...*
 
 Desktop version:
 
@@ -553,7 +553,7 @@ Extra Large Desktop Version:
  ![Preview](6_Responsive_Layouts/images/Preview_6_4C.png)
 
 
- example --> *6_Responsive_Layouts/Part_4/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/tree/main/6_Responsive_Layouts/Part_5) --> *6_Responsive_Layouts/Part_5/...*
 
 The examples created in this way now flexibly adapt to the layout breaks with the media queries to the user's devices.
 
@@ -565,7 +565,7 @@ Relative specifications should always be used instead of pixels for font sizes. 
 ## 6.3. Responsive layouts with images
 With a fixed image size, the text can slip away towards the bottom, and individual words can be left at the top if there is not enough space. This text wrapping can be avoided by setting the maximum width of the image with the CSS property `max-width` accordingly in percent. With `max-width` the maximum width of an element can be determined.
 
- example --> *6_Responsive_Layouts/Part_6/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_6/styles/layout.css) --> *6_Responsive_Layouts/Part_6/styles/layout.css*
    ```
     ...
     .img-art {
@@ -592,7 +592,7 @@ With a fixed image size, the text can slip away towards the bottom, and individu
 ### Flexible images in maximum possible width
 If images should always be expanded over the full width regardless of the device and still remain responsive, `max-width` can be set to 100%. This also depends on where the image is placed. Setting an image to 100% means that an image will not be responsive until the column it is defined in is smaller than the image. It also depends on the context in which the image is used.
 
- example --> *6_Responsive_Layouts/Part_6/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_6/index.html) --> *6_Responsive_Layouts/Part_6/index.html*
    ```
     ...
     <header class="header">
@@ -602,7 +602,7 @@ If images should always be expanded over the full width regardless of the device
 
    ```
 
- example --> *6_Responsive_Layouts/Part_6/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_6/styles/layout.css) --> *6_Responsive_Layouts/Part_6/styles/layout.css*
    ```
     ...
     .img-logo {
@@ -620,7 +620,7 @@ With `<video>` it works the same way as with images.
 To hide images in a certain version, here for example for smartphones you can set `display` to `none`. On the desktop screen, the logo remains visible.
 For the other layout wraps you have to make the header visible again with `display: block`.
 
- example --> *6_Responsive_Layouts/Part_7/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_7/styles/layout.css) --> *6_Responsive_Layouts/Part_7/styles/layout.css*
    ```
     ...
     .img-logo {
@@ -649,7 +649,7 @@ The disadvantage of `max-width` is that with small displays often large files mu
 The `<picture>` element, serves as a container element for multiple image sources. The individual image sources are specified with `source`.
 
 
- example --> *6_Responsive_Layouts/Part_8/index.html*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_8/index.html) --> *6_Responsive_Layouts/Part_8/index.html*
    ```
     ...
 
@@ -674,7 +674,7 @@ The `<picture>` element, serves as a container element for multiple image source
 ### Use area covering images
 When a background image is inserted with `background-image`, the height and width can be adjusted with the CSS property `background.size`.
 
- example --> *6_Responsive_Layouts/Part_9/styles/layout.css*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_9/styles/layout.css) --> *6_Responsive_Layouts/Part_9/styles/layout.css*
    ```
     ...
 
@@ -724,8 +724,7 @@ This defines a grid layout with five rows and ten columns. The header area is sp
 
 To use the grid layout, the class selector `.grid` must be used in the parent element, whose child elements are positioned in this grid. Inside the `div` parent element the child elements are placed (`<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>`).
 
- example --> *6_Responsive_Layouts/Part_10/index.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_10/index.html) --> *6_Responsive_Layouts/Part_10/index.html*
    ```
     <body>
         <div class="grid">
@@ -755,8 +754,7 @@ To use the grid layout, the class selector `.grid` must be used in the parent el
 ### Place elements in the grid
 With `grid-row-start` and `grid-row-end` or `grid-column-start` and `grid-column-end` you can specify where the HTML elements should be placed in the grid.
 
- example --> *6_Responsive_Layouts/Part_10/styles/layout.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_10/styles/layout.css) --> *6_Responsive_Layouts/Part_10/styles/layout.css*
    ```
     .header {
         grid-column-start: 1;
@@ -844,8 +842,7 @@ Starting from the basic mobile layout version, little work is now needed to resp
 
  ![Preview](6_Responsive_Layouts/images/Grid5.png)
 
- example --> *6_Responsive_Layouts/Part_10/styles/layout.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_10/styles/layout.css) --> *6_Responsive_Layouts/Part_10/styles/layout.css*
    ```
     @media screen and (min-width: 40em) {
         .content {
@@ -872,8 +869,7 @@ And yet another version for the desktop:
 
  ![Preview](6_Responsive_Layouts/images/Grid6.png)
 
- example --> *6_Responsive_Layouts/Part_10/styles/layout.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_10/styles/layout.css) --> *6_Responsive_Layouts/Part_10/styles/layout.css*
    ```
     @media screen and (min-width: 64em) {
         .content {
@@ -904,8 +900,7 @@ Desktop-Version
 Because the elements in the grid are freely positionable, it is easy to redesign the layout now. For this, only the positions of the cells and columns in the grid have to be adjusted.
 To change the desktop version from the previous example, you can simply change the values for `grid-column` as follows:
 
- example --> *6_Responsive_Layouts/Part_11/styles/layout.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_11/styles/layout.css) --> *6_Responsive_Layouts/Part_11/styles/layout.css*
    ```
     @media screen and (min-width: 64em) {
         .content {
@@ -968,8 +963,7 @@ On the other hand, the behavior of an element like `<a>` can be changed with `di
 
 - `display: block;`
 
- example --> *6_Responsive_Layouts/Part_12/indexA.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_12/indexA.html) --> *6_Responsive_Layouts/Part_12/indexA.html*
    ```
     p { 
       display: block;
@@ -989,8 +983,7 @@ In this example, `display: block;` can also be omitted, since the `<p>` element 
 
 But if now `display: inline;` is used, the single `<p>` -elements are displayed in a row, so no automatic line break.
 
- example --> *6_Responsive_Layouts/Part_12/indexB.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_12/indexB.html) --> *6_Responsive_Layouts/Part_12/indexB.html*
    ```
     p { 
         display: inline;
@@ -1008,8 +1001,7 @@ The specification of `width` is ignored and thus has no effect. Although the inn
 
 - `display: inline-block;`
 
- example --> *6_Responsive_Layouts/Part_12/indexC.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_12/indexC.html) --> *6_Responsive_Layouts/Part_12/indexC.html*
    ```
      p { 
       display: inline-block;
@@ -1029,8 +1021,7 @@ An `inline-block` -box initially behaves like an `inline` -box and runs over one
 
 - `display: none;`
 
- example --> *6_Responsive_Layouts/Part_12/indexD.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_12/indexD.html) --> *6_Responsive_Layouts/Part_12/indexD.html*
    ```
      p { 
       display: none;
@@ -1050,8 +1041,7 @@ Besides `display: grid` and `display: flex` (which I have already discussed here
 Then there is also `display: list-item;`, which displays the element as a list. This creates two boxes for an element. One box is used for the list item and the other box for the list element.
 There are other values for `display`, but they are rarely used. An overview of the existing values can be found at [MDN - display](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 
- example --> *6_Responsive_Layouts/Part_12/indexE.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_12/indexE.html) --> *6_Responsive_Layouts/Part_12/indexE.html*
    ```
     .table {
         display: table;
@@ -1084,8 +1074,7 @@ There are other values for `display`, but they are rarely used. An overview of t
 ## 6.6. Calculation with CSS and the `calc()` function
 Sometimes it is helpful to calculate and display individual values. This is possible with the `calc()` function, with which the basic arithmetic operations addition(+), subtraction(-), multiplication(*) and division(/) can be carried out. It is important that with the addition and subtraction, before and after a blank character must stand. This is not necessary for multiplication and division.
 
- example --> *6_Responsive_Layouts/Part_13/styles/layout.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_13/styles/layout.css) --> *6_Responsive_Layouts/Part_13/styles/layout.css*
    ```
     .column {
         float: left;
