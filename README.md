@@ -672,7 +672,7 @@ The `<picture>` element, serves as a container element for multiple image source
 
 
 ### Use area covering images
-When a background image is inserted with `background-image`, the height and width can be adjusted with the CSS property `background.size`.
+When a background image is inserted with `background-image`, the height and width can be adjusted with the CSS property `background-size`.
 
  [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_3/blob/main/6_Responsive_Layouts/Part_9/styles/layout.css) --> *6_Responsive_Layouts/Part_9/styles/layout.css*
    ```
